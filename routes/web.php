@@ -21,15 +21,24 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('mahasiswa')->group(function () {
     
    Route::get('/pendaftaran', function ($id) {
-       echo "<h2>Halaman Pendaftaran</h2>";
+       echo "<h2>Halaman Pendaftaran</h2>";$title = 'Pendaftaran';
+       $text = 'Halaman Pendaftaran';
+
+       return view('mahasiswa.index', compact('title', 'text'));
    });
 
    Route::get('/ujian', function ($id) {
-    echo "<h2>Halaman Pendaftaran</h2>";
+    $title = 'ujian';
+        $text = 'Halaman Ujian';
+
+        return view('mahasiswa.index', compact('title', 'text'));
 });
 
 Route::get('/nilai', function ($id) {
-    echo "<h2>Halaman Pendaftaran</h2>";
+    $title = 'Nilai';
+        $text = 'Halaman Nilai';
+
+        return view('mahasiswa.index', compact('title', 'text'));
 });
     
 });
